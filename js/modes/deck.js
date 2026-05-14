@@ -5,6 +5,12 @@
 function drawElement(type) {
 
   const pack = getPack();
+
+   if (!pack[type]) {
+    console.warn("Missing pack category:", type);
+    return;
+  }
+  
   const value = pick(pack[type]);
 
   const card = document.createElement("div");
