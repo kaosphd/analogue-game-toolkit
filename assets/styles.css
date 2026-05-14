@@ -20,6 +20,15 @@ body {
 }
 
 /* -------------------------
+   MODE THEMES
+------------------------- */
+
+body.deck-mode { background: #f7f3ee; }
+body.panic-mode { background: #eef6f2; }
+body.alignment-mode { background: #f6f7fb; }
+body.full-mode { background: #f3efe9; }
+
+/* -------------------------
    LAYOUT
 ------------------------- */
 
