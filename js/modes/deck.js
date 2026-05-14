@@ -1,5 +1,5 @@
 // =========================
-// DECK MODE
+// DECK MODE (V2+ RESTORE)
 // =========================
 
 function drawElement(type) {
@@ -15,27 +15,23 @@ function drawElement(type) {
 
   card.innerHTML = `
     <div class="card-top">
-
-      <span class="card-type">
-        ${type.toUpperCase()}
-      </span>
+      <span class="card-type">${type.toUpperCase()}</span>
 
       <div class="card-controls">
-
         <button onclick="rerollCard(this)">🔄</button>
         <button onclick="pinCard(this)">📌</button>
-
       </div>
-
     </div>
 
-    <div class="card-content">
-      ${value}
-    </div>
+    <div class="card-content">${value}</div>
   `;
 
   document.getElementById("table").prepend(card);
 }
+
+// -------------------------
+// SINGLE REROLL
+// -------------------------
 
 function rerollCard(btn) {
 
@@ -49,7 +45,11 @@ function rerollCard(btn) {
     pick(pack[type]);
 }
 
-function rerollAll() {
+// -------------------------
+// REROLL ALL UNPINNED
+// -------------------------
+
+function rerollAllUnpinned() {
 
   const cards = document.querySelectorAll(".table-card");
 
@@ -65,24 +65,58 @@ function rerollAll() {
   });
 }
 
+// -------------------------
+// PIN SYSTEM
+// -------------------------
+
 function pinCard(btn) {
 
   const card = btn.closest(".table-card");
 
-  const pinned = card.dataset.pinned === "true";
+  const isPinned = card.dataset.pinned === "true";
 
-  card.dataset.pinned = !pinned;
+  card.dataset.pinned = (!isPinned).toString();
 
   card.classList.toggle("pinned");
 }
+
+// -------------------------
+// CLEAR
+// -------------------------
 
 function clearTable() {
   document.getElementById("table").innerHTML = "";
 }
 
-// expose
+// -------------------------
+// EXPORT
+// -------------------------
+
+function exportTable() {
+
+  const cards = document.querySelectorAll(".table-card");
+
+  let output = "GAME ELEMENT DESIGN STUDIO\n\n";
+
+  cards.forEach(card => {
+
+    const type = card.dataset.type.toUpperCase();
+    const content = card.querySelector(".card-content").innerText;
+
+    output += `${type}: ${content}\n`;
+  });
+
+  navigator.clipboard.writeText(output);
+  alert("Copied to clipboard!");
+}
+
+// -------------------------
+// GLOBALS
+// -------------------------
+
 window.drawElement = drawElement;
 window.rerollCard = rerollCard;
-window.rerollAll = rerollAll;
+window.rerollAllUnpinned = rerollAllUnpinned;
 window.pinCard = pinCard;
 window.clearTable = clearTable;
+window.exportTable = exportTable;
