@@ -1,5 +1,3 @@
-document.body.dataset.mode = "alignment";
-
 function generateAlignment() {
 
   const pack = getPack();
