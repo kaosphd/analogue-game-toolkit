@@ -8,12 +8,16 @@ const PANIC = {
 
 function panic(type) {
 
+  document.body.classList.add("panic-mode");
+
   const result = pick(PANIC[type]);
 
   const card = document.createElement("div");
   card.className = "card";
 
-  card.innerHTML = `<p>${result}</p>`;
+  card.innerHTML = `
+    <p style="margin:0">${result}</p>
+  `;
 
   document.getElementById("panic-output").prepend(card);
 }
