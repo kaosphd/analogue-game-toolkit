@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Panic Mode</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🚨 Panic Mode</h1>
+<p>Stuck? Stumped? Great - that means you're designing!
+<br>
+Click on a common issue to get help with your block.</p>
+    <div class="nav">
+
+      <button onclick="panic('idea')">I Don't Have an Idea</button>
+      <button onclick="panic('scope')">It Feels Too Big</button>
+      <button onclick="panic('weird')">Make It Weirder</button>
+      <button onclick="panic('prototype')">How Do We Prototype This?</button>
+
+    </div>
+
+    <div id="panic-output"></div>
+
+  </div>
+
+  <script src="js/core.js"></script>
+  <script src="packs/entrepreneurship.js"></script>
+  <script src="js/modes/panic.js"></script>
+
+</body>
+</html>
