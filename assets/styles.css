@@ -54,6 +54,39 @@ body {
   margin-bottom: 16px;
 }
 
+.nav-suite {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0 20px;
+}
+
+.nav-suite a {
+  text-decoration: none;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.suite-header {
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  margin-bottom: 16px;
+}
+
+.suite-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.suite-subtitle {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
 /* -------------------------
    BUTTONS + LINKS (CRITICAL UI RESTORE)
 ------------------------- */
