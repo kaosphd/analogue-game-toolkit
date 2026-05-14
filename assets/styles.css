@@ -20,6 +20,37 @@ body {
 }
 
 /* -------------------------
+   PANIC MODE STYLING
+------------------------- */
+
+body.panic-mode {
+  background: radial-gradient(circle at top, #f2f6f4, #e7efea);
+}
+
+#panic-output .card {
+  background: white;
+  border-radius: 16px;
+
+  padding: 16px;
+
+  border-left: 4px solid #6aa84f;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+
+  animation: gentleFade 0.2s ease-in;
+}
+
+@keyframes gentleFade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* -------------------------
    LAYOUT CONTAINER
 ------------------------- */
 
