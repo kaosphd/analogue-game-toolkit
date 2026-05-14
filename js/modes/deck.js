@@ -2,6 +2,8 @@
 // DECK MODE (V2+ RESTORE)
 // =========================
 
+document.body.dataset.mode = "deck";
+
 function drawElement(type) {
 
   const pack = getPack();
