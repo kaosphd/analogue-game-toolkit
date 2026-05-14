@@ -1,3 +1,5 @@
+document.body.dataset.mode = "panic";
+
 const PANIC = {
 
   idea: ["Start small.", "One mechanic only.", "Prototype immediately."],
