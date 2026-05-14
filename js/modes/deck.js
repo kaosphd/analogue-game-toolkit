@@ -78,6 +78,12 @@ function pinCard(btn) {
   card.dataset.pinned = (!isPinned).toString();
 
   card.classList.toggle("pinned");
+
+// optional: update aria hint for future accessibility polish
+card.setAttribute(
+  "data-pin-state",
+  card.dataset.pinned
+);
 }
 
 // -------------------------
