@@ -129,10 +129,15 @@ a:hover {
   box-shadow: 0 6px 18px rgba(0,0,0,0.10);
 }
 
+button, select {
+  box-shadow: 0 2px 0 rgba(0,0,0,0.08);
+}
+
 button:active {
-  transform: translateY(0px);
+  transform: translateY(1px);
   box-shadow: none;
 }
+
 
 /* -------------------------
    SELECT (FIXED — WAS BREAKING UI FEEL)
