@@ -36,8 +36,6 @@ registerPack("entrepreneurship", {
     "Negotiation",
     "Hidden roles",
     "Resource sharing"
-    "Cooperative"
-    "Dice roll"
   ],
 
   settings: [
