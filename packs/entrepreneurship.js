@@ -36,6 +36,8 @@ registerPack("entrepreneurship", {
     "Negotiation",
     "Hidden roles",
     "Resource sharing"
+    "Cooperative"
+    "Dice roll"
   ],
 
   settings: [
@@ -50,6 +52,16 @@ registerPack("entrepreneurship", {
     "Reflective",
     "Experimental",
     "Competitive"
+  ],
+
+  wildcard: [
+    "A rule changes every round",
+    "One mechanic must be removed mid-playtest",
+    "Players must invent one rule together before starting",
+    "Hidden objective revealed halfway through",
+    "All resources are shared and can be stolen once",
+    "The game must be playable in 5 minutes",
+    "A non-player storyteller controls one rule secretly"
   ]
 
 });
