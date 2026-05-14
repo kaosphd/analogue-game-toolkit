@@ -1,5 +1,3 @@
-document.body.dataset.mode = "full";
-
 function generateFull() {
 
   const pack = getPack();
