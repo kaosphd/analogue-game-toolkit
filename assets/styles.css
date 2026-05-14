@@ -6,6 +6,37 @@ body {
 }
 
 /* -------------------------
+   SELECTOR
+------------------------- */
+
+select {
+  font-family: inherit;
+  font-size: 14px;
+
+  padding: 10px 14px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(0,0,0,0.12);
+  background: white;
+
+  cursor: pointer;
+
+  transition: 0.15s ease;
+}
+
+select:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+select:focus {
+  outline: none;
+  border-color: #ffb703;
+  box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.2);
+}
+
+
+/* -------------------------
    LAYOUT
 ------------------------- */
 
@@ -35,35 +66,6 @@ body {
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
-/* -------------------------
-   SELECTOR
-------------------------- */
-
-.select {
-  font-family: inherit;
-  font-size: 14px;
-
-  padding: 10px 14px;
-  border-radius: 12px;
-
-  border: 1px solid rgba(0,0,0,0.12);
-  background: white;
-
-  cursor: pointer;
-
-  transition: 0.15s ease;
-}
-
-select:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transform: translateY(-1px);
-}
-
-select:focus {
-  outline: none;
-  border-color: #ffb703;
-  box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.2);
-}
 
 /* -------------------------
    BUTTONS
